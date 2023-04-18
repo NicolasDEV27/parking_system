@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARQUEADERO</title>
+    <link rel="stylesheet" href="{% static 'central/style.css' %}">  
+  </head>
+  <body>
+    <h1>Bienvenido al Parqueadero</h1>
+    <form action="{% url 'central:index' %}" method="post">
+      <form method="POST">
+      {% csrf_token %}
+      <label for="placa">Placa del vehículo:</label>
+      <input type="text" name="placa" id="placa">
+      <p class="codigo-python">{{ error_blanks }}{{ new_car }}{{ delete_carro }}{{ error_char }}</p>
+      <input type="submit" value="INGRESO/SALIDA">
+  </form>
+  <a href="{% url 'central:mostrar_registro_historico' %}">Ver Registro historico</a>
+  <a href="{% url 'central:mostrar_carros_dentro' %}">Ver carros que están dentro</a>
+  <br>
+  <footer>
+    <p>&copy; {{"%s" | date:"Y" }} - Todos los derechos reservados. Este sitio web es para fines educativos y no pretende infringir los derechos de autor de nadie.</p>
+  </footer>
+  </body>
+</html>

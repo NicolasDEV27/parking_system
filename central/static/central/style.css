@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(211, 208, 208, 0.973);
+}
+
+a {
+  display: block; /* cambia el comportamiento de la etiqueta a un bloque */
+  margin: 0 auto; /* centra horizontalmente */
+  width: fit-content; /* ajusta el ancho al contenido */
+  margin-top: 20px; /* agrega un margen superior */
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+  
+form {
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.codigo-python {
+  font-size: 30px;
+  color: #000000;
+}
+  
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+  
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+  
+input[type=submit] {
+  background-color: #00ff22d2;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+input[type=submit]:hover {
+  background-color: #7bec8a9d;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  padding: 5px;
+}
+
+

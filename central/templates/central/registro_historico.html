@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CARROS INGRESADOS</title>
+    <link rel="stylesheet" href="{% static 'central/style.css' %}">  
+    <link rel="stylesheet" href="{% static 'central/registro_historico.css' %}">  
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PLACA</th>
+                <th>ESTADO</th>
+                <th>ULTIMA ENTRADA</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for carro in carros %}
+            <tr>
+                <td>{{ carro.car_id }}</td>
+                <td>{{ carro.car_placa }}</td>
+                <td>{{ carro.status }}</td>
+                <td>{{ carro.ultima_entrada }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+        <a href="{% url 'central:index' %}">Volver al inicio</a>
+    <footer>
+        <p>&copy; {{"%s" | date:"Y" }} - Todos los derechos reservados. Este sitio web es para fines educativos y no pretende infringir los derechos de autor de nadie.</p>
+    </footer>
+</body>
+</html>
